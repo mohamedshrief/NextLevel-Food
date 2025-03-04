@@ -1,8 +1,11 @@
 "use client";
-import { useActionState } from "react";
+
+// import { useActionState } from "react";
+import { useFormStatus } from "react-dom";
 
 export default function FormSubmitChangableBtn() {
-  const { pending } = useActionState;
+  const { pending } = useFormStatus();
+
   return (
     <button disabled={pending}>
       {pending ? "Submitting..." : "Share Meal"}
