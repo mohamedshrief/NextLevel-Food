@@ -11,7 +11,7 @@ export function generateMetadata({ params }) {
     description: meal.summary,
   };
 }
-
+const x = null;
 export default function MealDetails({ params }) {
   const meal = getMeal(params.mealSlug);
   meal.instructions = meal.instructions.replace(/\n /g, "<br />");
